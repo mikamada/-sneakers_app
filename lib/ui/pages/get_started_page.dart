@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers_app/ui/pages/sign_up.dart';
 import '../../shared/theme.dart';
 
 class GetStartedPage extends StatelessWidget {
@@ -57,7 +58,14 @@ class GetStartedPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(17),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignUp(),
+                    ),
+                  );
+                },
                 child: Text(
                   'Get Started',
                   style: whiteTextStyle.copyWith(

@@ -8,6 +8,15 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
+      body: SafeArea(
+        child: ListView(
+          children: [
+            Center(
+              child: Text('sign Up Page'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
