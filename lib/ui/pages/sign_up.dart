@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_app/shared/theme.dart';
+import 'package:sneakers_app/ui/widgets/text_form_field.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -33,24 +34,24 @@ class SignUp extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Full name',
-              style: blackTextStyle.copyWith(fontSize: 18, fontWeight: medium),
-            ),
-            SizedBox(
-              height: 6,
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(
-                  Icons.account_circle,
-                  color: primaryColor,
-                ),
-                hintText: 'Your full name',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(17),
-                ),
+            ItemFormField(
+              margin: EdgeInsets.only(
+                bottom: 20,
               ),
+              name: 'Full name',
+              hint: 'Your full name',
+            ),
+            ItemFormField(
+              margin: EdgeInsets.only(
+                bottom: 20,
+              ),
+              name: 'Email address',
+              hint: 'Your email address',
+            ),
+            ItemFormField(
+              obsecure: true,
+              name: 'Password',
+              hint: 'Your password',
             ),
           ],
         ),
@@ -61,15 +62,16 @@ class SignUp extends StatelessWidget {
       backgroundColor: backgroundColor,
       body: SafeArea(
         child: ListView(
-            padding: EdgeInsets.only(
-              left: 24,
-              right: 24,
-              top: 50,
-            ),
-            children: [
-              title(),
-              textFieldForm(),
-            ]),
+          padding: EdgeInsets.only(
+            left: 24,
+            right: 24,
+            top: 50,
+          ),
+          children: [
+            title(),
+            textFieldForm(),
+          ],
+        ),
       ),
     );
   }
