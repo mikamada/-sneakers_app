@@ -7,13 +7,13 @@ class ItemFormField extends StatelessWidget {
   final bool obsecure;
   final EdgeInsets margin;
 
-  const ItemFormField({
-    Key? key,
-    this.margin = EdgeInsets.zero,
-    required this.name,
-    required this.hint,
-    this.obsecure = false,
-  }) : super(key: key);
+  const ItemFormField(
+      {Key? key,
+      this.margin = EdgeInsets.zero,
+      required this.name,
+      required this.hint,
+      this.obsecure = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,10 @@ class ItemFormField extends StatelessWidget {
         children: [
           Text(
             name,
-            style: blackTextStyle.copyWith(fontSize: 18, fontWeight: medium),
+            style: blackTextStyle.copyWith(
+              fontSize: 18,
+              fontWeight: medium,
+            ),
           ),
           SizedBox(
             height: 6,
@@ -32,10 +35,18 @@ class ItemFormField extends StatelessWidget {
           TextFormField(
             obscureText: obsecure,
             decoration: InputDecoration(
-              prefixIcon: Icon(
-                Icons.account_circle,
-                color: primaryColor,
-              ),
+              // prefix: Container(
+              //   width: 24,
+              //   height: 24,
+              //   decoration: BoxDecoration(
+              //     color: primaryColor,
+              //     image: DecorationImage(
+              //       image: AssetImage(
+              //         'assets/account_circle.png',
+              //       ),
+              //     ),
+              //   ),
+              // ),
               hintText: hint,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(17),

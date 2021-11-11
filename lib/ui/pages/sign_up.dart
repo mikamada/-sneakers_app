@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:sneakers_app/shared/theme.dart';
+import 'package:sneakers_app/ui/widgets/custom_button.dart';
 import 'package:sneakers_app/ui/widgets/text_form_field.dart';
 
 class SignUp extends StatelessWidget {
@@ -52,6 +54,29 @@ class SignUp extends StatelessWidget {
               obsecure: true,
               name: 'Password',
               hint: 'Your password',
+            ),
+            CustomButton(
+              margin: EdgeInsets.only(
+                top: 20,
+                bottom: 50,
+              ),
+              name: 'Submit',
+              onPressed: () {},
+            ),
+            Center(
+              child: Container(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Have an account? Sign In',
+                    style: greyTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: light,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
