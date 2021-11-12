@@ -4,15 +4,15 @@ import 'package:sneakers_app/shared/theme.dart';
 import 'package:sneakers_app/ui/widgets/custom_button.dart';
 import 'package:sneakers_app/ui/widgets/text_form_field.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({Key? key}) : super(key: key);
+class SignIn extends StatelessWidget {
+  const SignIn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget title() {
       return Center(
         child: Text(
-          'Join us and get\nYour dream sneakers',
+          'Sign In with\nyour existing account',
           style: blackTextStyle.copyWith(
             fontSize: 24,
             fontWeight: semiBold,
@@ -40,13 +40,6 @@ class SignUp extends StatelessWidget {
               margin: EdgeInsets.only(
                 bottom: 20,
               ),
-              name: 'Full name',
-              hint: 'Your full name',
-            ),
-            ItemFormField(
-              margin: EdgeInsets.only(
-                bottom: 20,
-              ),
               name: 'Email address',
               hint: 'Your email address',
             ),
@@ -60,15 +53,17 @@ class SignUp extends StatelessWidget {
                 top: 20,
                 bottom: 50,
               ),
-              name: 'Submit',
+              name: 'Sign In Now',
               onPressed: () {},
             ),
             Center(
               child: Container(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   child: Text(
-                    'Have an account? Sign In',
+                    'Don’t have an account Sign Up',
                     style: greyTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: light,
