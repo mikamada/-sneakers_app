@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_app/shared/theme.dart';
+import 'package:sneakers_app/ui/widgets/custom_filter.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -54,8 +55,6 @@ class HomePage extends StatelessWidget {
         margin: EdgeInsets.only(
           top: 30,
         ),
-        height: 50,
-        width: double.infinity,
         child: TextFormField(
           decoration: InputDecoration(
             prefixIcon: Icon(
@@ -73,6 +72,70 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget filter() {
+      return Container(
+        margin: EdgeInsets.only(top: 30),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CustomFilter(
+              name: 'Kategori',
+            ),
+            CustomFilter(
+              name: 'Warna',
+            ),
+            CustomFilter(
+              name: 'Motif',
+            ),
+            CustomFilter(
+              name: 'Bahan',
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget products() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 20,
+        ),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  width: 171,
+                  height: 256,
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 171,
+                        height: 126,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/img_1.png'),
+                          ),
+                          color: darkGreyColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
     return ListView(
       padding: EdgeInsets.symmetric(
         horizontal: 24,
@@ -80,6 +143,8 @@ class HomePage extends StatelessWidget {
       children: [
         header(),
         formSearch(),
+        filter(),
+        products(),
       ],
     );
   }
