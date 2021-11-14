@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_app/ui/pages/get_started_page.dart';
+import 'package:sneakers_app/ui/pages/main_page.dart';
 import 'package:sneakers_app/ui/pages/sign_in_page.dart';
 import 'package:sneakers_app/ui/pages/sign_up_page.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/sign-up': (BuildContext context) => SignUp(),
         '/sign-in': (BuildContext context) => SignIn(),
+        '/main': (BuildContext context) => MainPage(),
       },
     );
   }

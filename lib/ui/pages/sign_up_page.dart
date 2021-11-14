@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sneakers_app/shared/theme.dart';
+import 'package:sneakers_app/ui/pages/main_page.dart';
 import 'package:sneakers_app/ui/widgets/custom_button.dart';
 import 'package:sneakers_app/ui/widgets/text_form_field.dart';
 
@@ -61,7 +62,14 @@ class SignUp extends StatelessWidget {
                 bottom: 50,
               ),
               name: 'Sign Up Now',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MainPage(),
+                  ),
+                );
+              },
             ),
             Center(
               child: Container(

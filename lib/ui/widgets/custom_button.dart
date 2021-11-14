@@ -5,7 +5,7 @@ class CustomButton extends StatelessWidget {
   final String name;
   final EdgeInsets margin;
   final double width;
-  final Function onPressed;
+  final Function() onPressed;
   const CustomButton({
     Key? key,
     required this.name,
@@ -27,9 +27,7 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(17),
           ),
         ),
-        onPressed: () {
-          onPressed;
-        },
+        onPressed: onPressed,
         child: Text(
           name,
           style: whiteTextStyle.copyWith(

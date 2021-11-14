@@ -9,6 +9,7 @@ Color greyColor = Color(0xffAFAFAF);
 Color darkGreyColor = Color(0xffB9B9B9);
 Color brownColor = Color(0xffE14545);
 Color greenColor = Color(0xffFFB341);
+Color transparent = Colors.transparent;
 
 TextStyle blackTextStyle = GoogleFonts.poppins(
   color: blackColor,

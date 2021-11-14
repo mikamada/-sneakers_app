@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers_app/ui/pages/sign_up_page.dart';
+import 'package:sneakers_app/ui/widgets/custom_button.dart';
 import '../../shared/theme.dart';
 
 class GetStartedPage extends StatelessWidget {
@@ -44,30 +44,14 @@ class GetStartedPage extends StatelessWidget {
                 fontWeight: regular,
               ),
             ),
-            Container(
+            CustomButton(
+              name: 'Get Started',
+              onPressed: () {
+                Navigator.pushNamed(context, '/sign-up');
+              },
               margin: EdgeInsets.only(
                 top: 42,
                 bottom: 40,
-              ),
-              height: 55,
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(17),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/sign-up');
-                },
-                child: Text(
-                  'Get Started',
-                  style: whiteTextStyle.copyWith(
-                    fontSize: 18,
-                    fontWeight: medium,
-                  ),
-                ),
               ),
             ),
           ],
