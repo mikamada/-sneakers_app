@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_app/shared/theme.dart';
+import 'package:sneakers_app/ui/pages/home_page.dart';
 import 'package:sneakers_app/ui/widgets/custom_button_navigation_item.dart';
 
 class MainPage extends StatelessWidget {
@@ -7,6 +8,10 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget buildContent() {
+      return HomePage();
+    }
+
     Widget buttonNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
@@ -49,6 +54,7 @@ class MainPage extends StatelessWidget {
       backgroundColor: backgroundColor,
       body: Stack(
         children: [
+          buildContent(),
           buttonNavigation(),
         ],
       ),
