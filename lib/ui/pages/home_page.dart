@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_app/shared/theme.dart';
 import 'package:sneakers_app/ui/widgets/custom_filter.dart';
+import 'package:sneakers_app/ui/widgets/product_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -102,34 +103,93 @@ class HomePage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 171,
-                  height: 256,
-                  decoration: BoxDecoration(
-                    color: whiteColor,
-                    borderRadius: BorderRadius.circular(10),
+            Container(
+              margin: EdgeInsets.only(bottom: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ProductCard(
+                    name: 'Adidas Charlotte\nsepatu sneaker pria',
+                    price: 1250000,
+                    imgUrl: 'assets/img_1.png',
+                    rating: 4,
+                    terjual: 300,
                   ),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 171,
-                        height: 126,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/img_1.png'),
-                          ),
-                          color: darkGreyColor,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ],
+                  ProductCard(
+                    name: 'Adidas Charlotte\nsepatu sneaker pria',
+                    price: 1250000,
+                    imgUrl: 'assets/img_2.png',
+                    rating: 4,
+                    terjual: 300,
                   ),
-                ),
-              ],
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ProductCard(
+                    name: 'Adidas Charlotte\nsepatu sneaker pria',
+                    price: 1250000,
+                    imgUrl: 'assets/img_1.png',
+                    rating: 4,
+                    terjual: 300,
+                  ),
+                  ProductCard(
+                    name: 'Adidas Charlotte\nsepatu sneaker pria',
+                    price: 1250000,
+                    imgUrl: 'assets/img_2.png',
+                    rating: 4,
+                    terjual: 300,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ProductCard(
+                    name: 'Adidas Charlotte\nsepatu sneaker pria',
+                    price: 1250000,
+                    imgUrl: 'assets/img_1.png',
+                    rating: 4,
+                    terjual: 300,
+                  ),
+                  ProductCard(
+                    name: 'Adidas Charlotte\nsepatu sneaker pria',
+                    price: 1250000,
+                    imgUrl: 'assets/img_2.png',
+                    rating: 4,
+                    terjual: 300,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 90),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ProductCard(
+                    name: 'Adidas Charlotte\nsepatu sneaker pria',
+                    price: 1250000,
+                    imgUrl: 'assets/img_1.png',
+                    rating: 4,
+                    terjual: 300,
+                  ),
+                  ProductCard(
+                    name: 'Adidas Charlotte\nsepatu sneaker pria',
+                    price: 1250000,
+                    imgUrl: 'assets/img_2.png',
+                    rating: 4,
+                    terjual: 300,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
