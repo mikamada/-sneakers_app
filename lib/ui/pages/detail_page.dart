@@ -155,6 +155,7 @@ class DetailPage extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Variation",
@@ -163,18 +164,22 @@ class DetailPage extends StatelessWidget {
                           fontWeight: semiBold,
                         ),
                       ),
+                      Row(
+                        children: [
+                          Text(
+                            'Size: 39, 40, 41, 42, 43',
+                            style: greyTextStyle.copyWith(
+                              fontWeight: semiBold,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
                 SizedBox(
                   width: 5,
-                ),
-                Text(
-                  'Size: 35, 36, 37, 38, 38, 40, 41, 42, 43',
-                  style: greyTextStyle.copyWith(
-                    fontWeight: semiBold,
-                  ),
-                  overflow: TextOverflow.ellipsis,
                 ),
                 Icon(
                   Icons.arrow_forward_ios,
