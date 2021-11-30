@@ -5,6 +5,7 @@ Color primaryColor = Color(0xff5C40CC);
 Color backgroundColor = Color(0xffFEEFF2);
 Color blackColor = Color(0xff000000);
 Color whiteColor = Color(0xffffffff);
+Color cardSize = Color(0xff4C74DA);
 Color greyColor = Color(0xffAFAFAF);
 Color darkGreyColor = Color(0xffB9B9B9);
 Color brownColor = Color(0xffE14545);
@@ -25,6 +26,10 @@ TextStyle greyTextStyle = GoogleFonts.poppins(
 
 TextStyle brownTextStyle = GoogleFonts.poppins(
   color: brownColor,
+);
+
+TextStyle blueTextStyle = GoogleFonts.poppins(
+  color: primaryColor,
 );
 
 FontWeight light = FontWeight.w300;
