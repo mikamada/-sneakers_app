@@ -51,28 +51,6 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    Widget formSearch() {
-      return Container(
-        margin: EdgeInsets.only(
-          top: 30,
-        ),
-        child: TextFormField(
-          decoration: InputDecoration(
-            prefixIcon: Icon(
-              Icons.search,
-              color: blackColor,
-            ),
-            hintText: 'search for sneakers',
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(
-                12,
-              ),
-            ),
-          ),
-        ),
-      );
-    }
-
     Widget filter() {
       return Container(
         margin: EdgeInsets.only(top: 30),
@@ -196,15 +174,18 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    return ListView(
-      padding: EdgeInsets.symmetric(
-        horizontal: 24,
-      ),
+    return Stack(
       children: [
-        header(),
-        formSearch(),
-        filter(),
-        products(),
+        ListView(
+          padding: EdgeInsets.symmetric(
+            horizontal: 24,
+          ),
+          children: [
+            header(),
+            filter(),
+            products(),
+          ],
+        ),
       ],
     );
   }

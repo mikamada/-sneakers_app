@@ -54,7 +54,9 @@ class SignIn extends StatelessWidget {
                 bottom: 50,
               ),
               name: 'Sign In Now',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/main');
+              },
             ),
             Center(
               child: Container(

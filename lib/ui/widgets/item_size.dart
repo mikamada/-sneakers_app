@@ -26,17 +26,21 @@ class _ItemSizeState extends State<ItemSize> {
       },
       child: Container(
         margin: EdgeInsets.only(left: 18),
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        child: Text(
-          widget.size,
-          style: blackTextStyle.copyWith(
-            fontWeight: bold,
-            fontSize: 18,
+        padding: EdgeInsets.symmetric(horizontal: 5),
+        height: 40,
+        width: 40,
+        child: Center(
+          child: Text(
+            widget.size,
+            style: blackTextStyle.copyWith(
+              fontWeight: bold,
+              fontSize: 18,
+            ),
           ),
         ),
         decoration: BoxDecoration(
-          color: isSelect ? cardSize.withOpacity(0.40) : transparent,
-          borderRadius: BorderRadius.circular(3),
+          color: isSelect ? greenColor.withOpacity(0.70) : transparent,
+          borderRadius: BorderRadius.circular(100),
         ),
       ),
     );

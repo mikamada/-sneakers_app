@@ -47,7 +47,12 @@ class ProductCard extends StatelessWidget {
                   image: AssetImage(imgUrl),
                 ),
                 color: darkGreyColor,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(0),
+                  bottomRight: Radius.circular(0),
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
               ),
             ),
             Container(
@@ -68,7 +73,7 @@ class ProductCard extends StatelessWidget {
                   ),
                   Text(
                     'Rp. ${price}',
-                    style: brownTextStyle.copyWith(
+                    style: blueTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: semiBold,
                     ),

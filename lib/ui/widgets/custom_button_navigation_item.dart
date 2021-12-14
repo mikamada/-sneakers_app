@@ -28,10 +28,10 @@ class CustomButtonItem extends StatelessWidget {
           ),
         ),
         Container(
-          width: 30,
+          width: 40,
           height: 2,
           decoration: BoxDecoration(
-            color: actived ? primaryColor : transparent,
+            color: actived ? greenColor : transparent,
             borderRadius: BorderRadius.circular(18),
           ),
         ),
